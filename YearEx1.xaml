@@ -1,0 +1,51 @@
+﻿<Page x:Class="SerpCollPoj.YearEx1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SerpCollPoj"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+         TextElement.FontWeight="Regular"
+         TextElement.FontSize="13"
+         TextOptions.TextFormattingMode="Ideal"
+         TextOptions.TextRenderingMode="Auto"
+
+         FontFamily="{DynamicResource MaterialDesignFont}"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="YearEx1" >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel VerticalAlignment="Bottom" Margin="10,0,20,205" Height="40" Orientation="Horizontal" Grid.RowSpan="2" >
+
+
+            <Button x:Name="bt1" Width="200" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="Button_Click">Обзор</Button>
+            <TextBlock x:Name="bts" VerticalAlignment="Center" Margin="0 0 0 0" FontSize="20"><Run Text="Выбрать файлы "/><Run Text="под "/><Run Text="за"/><Run Text="п"/><Run Text="олнени"/><Run Text="е"/></TextBlock>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Top" Margin="10,50,20,0" Height="40" Grid.Row="1" Orientation="Horizontal"/>
+        <Button x:Name="Inputted" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="60" Width="321" Margin="0,0,10,10" FontSize="30" Click="Inputted_Click" Content="Создать ведомость"/>
+        <TextBlock HorizontalAlignment="Left" FontSize="20" Margin="302,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Степень заполнения"/><Run Text=":"/></TextBlock>
+        <TextBlock x:Name="Persent" TextAlignment="Center" HorizontalAlignment="Left" FontSize="40" Margin="160,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="118" Width="480" Text="Происходит считывание данных"/>
+        <TextBox Style="{DynamicResource MaterialDesignOutlinedTextFieldTextBox}" x:Name="path" HorizontalAlignment="Left" Margin="10,72,0,0" Grid.Row="1" TextWrapping="Wrap" Text="C:\" VerticalAlignment="Top" Width="470" TextChanged="path_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,56,0,0" Grid.Row="1"  TextWrapping="Wrap" VerticalAlignment="Top" Text="Путь к готовому файлу "/>
+        <StackPanel VerticalAlignment="Top" Margin="10,90,20,0" Height="40" Grid.Row="1" Orientation="Horizontal"/>
+        <TextBox Style="{DynamicResource MaterialDesignOutlinedTextFieldTextBox}" x:Name="YearLS" HorizontalAlignment="Left" Margin="10,112,0,0" Grid.Row="1" TextWrapping="Wrap" Text="2022 - 2023" VerticalAlignment="Top" Width="120" TextChanged="path_Copy_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,96,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Года ведомости"/><Run Text=" "/></TextBlock>
+        <TextBox Style="{DynamicResource MaterialDesignOutlinedTextFieldTextBox}" x:Name="YearLS_Copy" HorizontalAlignment="Left" Margin="160,112,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="path_Copy_TextChanged" Text="Vedomost"/>
+        <TextBlock HorizontalAlignment="Left" Margin="160,96,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="ru-ru" Text="Имя файла"/><Run Text=" "/></TextBlock>
+        <TextBlock x:Name="rer" HorizontalAlignment="Left" Margin="530,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.RowSpan="2"><Run Language="ru-ru" Text="Листов:"/><Run Text=" "/></TextBlock>
+        <ComboBox Style="{DynamicResource MaterialDesignOutlinedTextFieldTextBox}" x:Name="CBList" HorizontalAlignment="Left" Margin="530,67,0,0" Grid.Row="1" VerticalAlignment="Top" Width="68" RenderTransformOrigin="-0.029,0.245"/>
+        <Button x:Name="ButtList" Content="Установить" HorizontalAlignment="Left" Margin="670,66,0,0" VerticalAlignment="Top" Height="21" Width="120" Click="ButtList_Click" RenderTransformOrigin="0.537,0.182" Cursor="Hand" Grid.Row="1"/>
+
+        <TextBlock  x:Name="TB_list"  HorizontalAlignment="Left" Margin="530,29,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="34" Width="260"/>
+
+        <TextBox Style="{DynamicResource MaterialDesignOutlinedTextFieldTextBox}" x:Name="ListsCheck" HorizontalAlignment="Left"  Margin="530,4,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="path_Copy1_TextChanged" Text="1"/>
+
+
+
+    </Grid>
+</Page>

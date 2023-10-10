@@ -1,0 +1,35 @@
+﻿<Page x:Class="SerpCollPoj.Fulling"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SerpCollPoj"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Fulling">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="113*"></RowDefinition>
+            <RowDefinition Height="173*"></RowDefinition>
+            <RowDefinition Height="62*"></RowDefinition>
+            <RowDefinition Height="102*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <TextBlock TextAlignment="Center" >Добавьте Excel Файлы</TextBlock>
+            <Button Width="96" Click="Button_Click" Height="27">Добавить</Button>
+            <TextBlock TextAlignment="Center" >Добавьте путь</TextBlock>
+            <Button Width="95"  Click="Button_Click_1" Height="26">Добавить</Button>
+            <TextBlock TextAlignment="Center" >Введите название файла</TextBlock>
+            <TextBox BorderBrush ="Black" BorderThickness="1" x:Name="tbname" Width="133" Height="23" Style="{DynamicResource MaterialDesignOutlinedTextFieldTextBox}" ></TextBox>
+        </StackPanel>
+
+        <Button Grid.Row="2" Grid.Column="1" Height="38" Width="124" VerticalAlignment="Center" x:Name="www" HorizontalAlignment="Center" Click="Button_Click_2" >Создать</Button>
+
+    </Grid>
+</Page>
